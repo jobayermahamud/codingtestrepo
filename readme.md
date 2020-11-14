@@ -1,3 +1,13 @@
+<h4>Issue solved</h4>
+<ol>
+<li>Csrf issue in login form</li>
+<li>E-mail field name mismatch in login form</li>
+<li>Correct password spelling in login form</li>
+<li></li>    
+</ol>
+
+
+<p>================</p>
 <ol>
 <li>Clone git repo
 https://github.com/jobayermahamud/codingtestrepo.git
