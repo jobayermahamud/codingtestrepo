@@ -12,9 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('home');
+    return redirect('home');
 });
 
 Auth::routes();
+
+Route::post('activate','UserController@activateUser');
+Route::get('success','UserController@successSubscription');
+Route::post('cancel','UserController@cancelSubscription');
+// Route::get('activate','UserController@activateUser');
+
+Route::get('checkout','UserController@checkoutUser');
+Route::get('report','UserController@monthlyReport');
 
 Route::get('/home', 'HomeController@index')->name('home');
