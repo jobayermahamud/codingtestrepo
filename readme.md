@@ -11,7 +11,8 @@
 
 <h4>Feature</h4>
 <ol>
-<li>Restrict login for 10 minutes for 3 wrong attempt</li>    
+
+<li>Login restriction  10 minues for 3 wrongattempt </li>    
 <li>Add stripe payment gateway</li>
 <li>Active and inactive account according to subscription</li>
 <li>Monthly payment report for user</li>
