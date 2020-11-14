@@ -25,13 +25,19 @@
                         </tr>
                         <tr>
                             <td>Status</td>
-                            <td>{{Auth::user()->status==1?'Active':'Inactive'}}</td>
+                        <td>{{Auth::user()->status==1?'Active':'Inactive'}}(<a href="{{url('report')}}">Monthly reports</a>)</td>
                         </tr>
                         </tbody>
                     </table>
                         @if(Auth::user()->status!=1)
-                            <button class="btn btn-success">Activate</button>
+                         <a href="{{url('checkout')}}" class="btn btn-success">Activate</a>
                         @endif
+
+                    @if(Auth::user()->status==1)
+                        <a href="#" class="btn btn-success">Account will be activated untill {{$expire}}</a>
+                    @endif
+
+                      
                 </div>
             </div>
         </div>
