@@ -1,26 +1,33 @@
-1.Clone git repo
+<ol>
+<li>Clone git repo
 https://github.com/jobayermahamud/codingtestrepo.git
 and run composer install command 
+</li>    
 
-2.Create .env file in root directory and copy all content from .env.example to .env file
+<li>Create .env file in root directory and copy all content from .env.example to .env file</li>
 
-3.Generate application key using  'php artisan key:generate' command
+<li>Generate application key using  'php artisan key:generate' command</li>
 
-4.Create database for your project
+<li>Create database for your project</li>
 
-5. Config database credential to .env file
+<li>Config database credential to .env file</li>
 
-DB_CONNECTION=mysql
+<li>DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=YOUR_DB_NAME
 DB_USERNAME=DB_USER
 DB_PASSWORD=DB_PASSWORD
+    
+</li>    
 
 
-6. Run 'php artisan migrate' command to create db tables
+<li>Run 'php artisan migrate' command to create db tables</li>
 
 
-Regards
+<li>Regards
 Jobayermahamud
 Jobayermahamudkamalcse@gmail.com
+    </li>
+
+</ol>
