@@ -17,7 +17,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch"></script>
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body>
     <div id="app">
@@ -76,5 +79,41 @@
             @yield('content')
         </main>
     </div>
+
+    <script type="text/javascript">
+         var stripe = Stripe("pk_test_51Hn97WJEfHAaOKZ1onaDlEI0dNF1GaDWBcZiNIaCJclkOJaT3F7rJVHCYzmv11A5yZ4qePP6RfKgtUWYGLRhEiDf007WSakRU3");
+         addEventListener('click',(e)=>{
+            
+            if(e.target.id=='checkout-button'){
+                e.target.textContent='Processing...'
+                fetch("{{url('activate')}}", {
+            method: "POST",
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            },
+          })
+            .then(function (response) {
+              return response.json();
+            })
+            .then(function (session) {
+              return stripe.redirectToCheckout({ sessionId: session.id });
+            })
+            .then(function (result) {
+              // If redirectToCheckout fails due to a browser or network
+              // error, you should display the localized error message to your
+              // customer using error.message.
+              if (result.error) {
+                alert(result.error.message);
+              }
+            })
+            .catch(function (error) {
+              console.error("Error:", error);
+            });
+            }
+         })
+        // Create an instance of the Stripe object with your publishable API key
+        
+        
+      </script>
 </body>
 </html>
