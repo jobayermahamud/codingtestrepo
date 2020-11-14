@@ -12,11 +12,11 @@ and run composer install command
 
 <li>Config database credential to .env file</li>
 
-<li>DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE=YOUR_DB_NAME
-DB_USERNAME=DB_USER
+<li>DB_CONNECTION=mysql ,
+DB_HOST=127.0.0.1 ,
+DB_PORT=3306 ,
+DB_DATABASE=YOUR_DB_NAME ,
+DB_USERNAME=DB_USER ,
 DB_PASSWORD=DB_PASSWORD
     
 </li>    
