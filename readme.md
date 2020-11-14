@@ -3,11 +3,22 @@
 <li>Csrf issue in login form</li>
 <li>E-mail field name mismatch in login form</li>
 <li>Correct password spelling in login form</li>
-<li></li>    
+<li>Hash password during user registration in RegistrationController.php</li>    
 </ol>
 
 
 <p>================</p>
+
+<h4>Feature</h4>
+<ol>
+<li>Add stripe payment gateway</li>
+<li>Active and inactive account according to subscription</li>
+<li>Monthly payment report for user</li>
+
+</ol>
+
+
+<p>=======================</p>
 <ol>
 <li>Clone git repo
 https://github.com/jobayermahamud/codingtestrepo.git
