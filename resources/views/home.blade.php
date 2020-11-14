@@ -25,7 +25,7 @@
                         </tr>
                         <tr>
                             <td>Status</td>
-                        <td>{{Auth::user()->status==1?'Active':'Inactive'}}(<a href="{{url('report')}}">Monthly reports</a>)</td>
+                        <td>{{Auth::user()->status==1 ? 'Active':'Inactive'}} <a class="btn btn-primary btn-sm" href="{{url('report')}}">Monthly reports</a></td>
                         </tr>
                         </tbody>
                     </table>
